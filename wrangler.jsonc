@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "guess-the-leetcode",
+  "compatibility_date": "2026-09-13",
+
+  // Static site: there is no Worker script, just the built bundle. Cloudflare
+  // runs `npm run build` first, which writes dist/.
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
